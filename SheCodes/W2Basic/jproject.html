@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <style>
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        color: #1a64d6;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+
+        font-size: 34px;
+        line-height: 48px;
+        font-weight: 400;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      li:hover {
+        background: #fffbef;
+      }
+
+      p {
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: white;
+        color: #1a64d6;
+        border: 1px solid #1a64d6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌤
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <ul>
+      <li>
+        <h3>
+          🌧Tomorrow
+        </h3>
+        <p>10° / <strong>22°</strong></p>
+      </li>
+      <li>
+        <h3>
+          🌥 Saturday
+        </h3>
+        <p>15° / <strong>17°</strong></p>
+      </li>
+      <li>
+        <h3>
+          ☀️ Sunday
+        </h3>
+        <p>25° / <strong>28°</strong></p>
+      </li>
+    </ul>
+
+    <button>
+      Change city
+    </button>
+    <p>
+      Coded by Gamuchirai Muchafa
+    </p>
+    <script>
+      const changeCityButton = document.querySelector('button');
+      const cityNameElement = document.querySelector('h1');
+      const currentTempElement = document.querySelector('h2');
+      const forecastElements = document.querySelectorAll('li');
+
+      // Simulated weather data
+      const weatherData = {
+        "New York": {
+          current: { emoji: "☀️", temp: 26, low: 19, high: 30 },
+          forecast: [
+            { day: "Tomorrow", emoji: "🌦", low: 20, high: 29 },
+            { day: "Saturday", emoji: "🌧", low: 22, high: 27 },
+            { day: "Sunday", emoji: "⛅️", low: 23, high: 31 }
+          ]
+        },
+        "London": {
+          current: { emoji: "☁️", temp: 18, low: 12, high: 20 },
+          forecast: [
+            { day: "Tomorrow", emoji: "🌧", low: 10, high: 19 },
+            { day: "Saturday", emoji: "🌥", low: 14, high: 18 },
+            { day: "Sunday", emoji: "🌦", low: 15, high: 21 }
+          ]
+        },
+        "Tokyo": {
+          current: { emoji: "🌤", temp: 21, low: 13, high: 23 },
+          forecast: [
+            { day: "Tomorrow", emoji: "🌧", low: 10, high: 22 },
+            { day: "Saturday", emoji: "🌥", low: 15, high: 17 },
+            { day: "Sunday", emoji: "☀️", low: 25, high: 28 }
+          ]
+        }
+        // Add more cities as needed
+      };
+
+      changeCityButton.addEventListener('click', () => {
+        const newCity = prompt("Enter a city:");
+        if (newCity && weatherData[newCity]) {
+          const data = weatherData[newCity];
+
+          cityNameElement.innerHTML = `${data.current.emoji}<br />Currently ${data.current.temp}° in ${newCity}`;
+          currentTempElement.innerHTML = `${data.current.low}° / <strong>${data.current.high}°</strong>`;
+
+          forecastElements.forEach((element, index) => {
+            const forecast = data.forecast[index];
+            const h3 = element.querySelector('h3');
+            const p = element.querySelector('p');
+
+            h3.textContent = `${forecast.emoji} ${forecast.day}`;
+            p.innerHTML = `${forecast.low}° / <strong>${forecast.high}°</strong>`;
+          });
+        } else {
+          alert("City not found. Please try again.");
+        }
+      });
+    </script>
+  </body>
+</html>
