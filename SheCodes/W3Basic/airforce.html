@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheforce 🛸</title>
+    <style>
+        body {
+            background-color: rgb(253, 252, 249);
+        }
+        h1 {
+            text-align: center;
+        color: rgb(241, 12, 211);
+        background: linear-gradient(to right, rgb(123, 217, 230),  rgb(157, 228, 116));
+        
+        }
+        h2 {
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            color: rgb(59, 10, 35);
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-bottom: 10px;
+        }
+        
+        p {
+            line-height: 1.5;
+            font-size: 13px;
+            margin: 20px 0 10px;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        button {
+            display: block;
+            margin:  20px auto;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 6px;
+            background: aquamarine;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0.3);
+            transition: all 200em ease-in-out;
+            
+        }
+        button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 60px;
+        }
+
+        .learn-more {
+            color: rgb(228, 8, 92);
+            font-size: 11px;
+            text-decoration: none;
+        }
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>
+        Women of color are lagging behind in Air Force’s push for diversity
+    </h1>
+    <h2> 
+        <em>
+        AirForce story
+        </em>
+    </h2>
+    
+    <img src="https://i0.wp.com/hbcubuzz.com/wp-content/uploads/2019/06/IMG_5626.jpg?fit=828%2C798&ssl=1" alt="AirForce woman"  />
+    <p>
+        <strong>
+        Earlier this year, the Air Force’s first in-depth study on the experiences of troops of different races, ethnicities and genders shed new light on the disparate treatment that airmen and guardians face each day. But the latest update to those findings tells a more nuanced story.
+
+        Women typically make up an equal or higher share than men in promotions, enlisted leadership and professional military education designations, and the number of women joining the Air Force and Space Force is growing.
+        </strong>
+         
+    </p>
+    <strong>
+    <a href="https://www.airforcetimes.com/news/your-air-force/2021/11/10/women-of-color-are-lagging-behind-in-air-forces-push-for-diversity/" target="_blank" class="learn-more">
+            Learn more on this article 
+        </a>
+        </strong>
+    <button class="air-button">
+             👸 Air Force
+        </button>
+        <hr>
+        <p class="footer">
+        This page was built by 
+        <a href="https://github.com/CoderBlee"> 
+           <strong> Gamu Muchafa🪐 
+            </strong>
+           </a>
+        </p>
+        </div>
+
+        <script>
+            function air() {
+                let name = prompt("What is your name?");
+                let email = prompt("What is your email?");
+                let emoji = prompt("What is your emoji?");
+
+            
+
+                alert("Thank you " + name + "! We will be in touch by email, meanwhile read more about the Airforce! " + emoji);
+            }
+
+
+            let airButton = document.querySelector(".air-button");
+            airButton.addEventListener("click", air);
+        </script>
+</body>
+</html>

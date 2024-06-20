@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheforce 🛸</title>
+    <style>
+        body {
+            background-color: #fdfcf9;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #f10cd3;
+            background: linear-gradient(to right, #7bd9e6, #9de474);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #3b0a23;
+            padding: 15px;
+            font-size: 18px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            color: #000;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background: aquamarine;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+        .learn-more {
+            color: #e4085c;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            color: #000;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Women of Color are Lagging Behind in Air Force’s Push for Diversity</h1>
+        <h2><em>AirForce Story</em></h2>
+        <img src="https://i0.wp.com/hbcubuzz.com/wp-content/uploads/2019/06/IMG_5626.jpg?fit=828%2C798&ssl=1" alt="AirForce woman" />
+        <p>
+            <strong>Earlier this year, the Air Force’s first in-depth study on the experiences of troops of different races, ethnicities, and genders shed new light on the disparate treatment that airmen and guardians face each day. But the latest update to those findings tells a more nuanced story.</strong>
+        </p>
+        <p>
+            Women typically make up an equal or higher share than men in promotions, enlisted leadership, and professional military education designations, and the number of women joining the Air Force and Space Force is growing.
+        </p>
+        <a href="https://www.airforcetimes.com/news/your-air-force/2021/11/10/women-of-color-are-lagging-behind-in-air-forces-push-for-diversity/" target="_blank" class="learn-more"><strong>Learn more on this article</strong></a>
+        <button class="air-button">👸 Air Force</button>
+        <div class="footer">
+            This page was built by <a href="https://github.com/CoderBlee"><strong>Gamu Muchafa🪐</strong></a>
+        </div>
+    </div>
+
+    <script>
+        function air() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email?");
+            let emoji = prompt("What is your emoji?");
+            alert("Thank you " + name + "! We will be in touch by email. Meanwhile, read more about the Airforce! " + emoji);
+        }
+
+        document.querySelector(".air-button").addEventListener("click", air);
+    </script>
+</body>
+</html>
