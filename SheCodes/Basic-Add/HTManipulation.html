@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>HTML Class Manipulation</title>
+    <style>
+        .box {
+            background: turquoise;
+            width: 400px;
+            height: 400px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="box">Hello</div>
+    <script>
+        let box = document.querySelector(".box");
+        box.innerHTML = "Hello Box";
+        console.log(box.innerHTML);
+    </script>
+</body>
+</html>
