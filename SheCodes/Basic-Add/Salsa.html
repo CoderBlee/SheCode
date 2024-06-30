@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salsa - My hobby💃</title>
+    <style>
+        body {
+        background: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+      }
+        
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100% ;
+
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            background: white;
+            font-size: 24px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all150ms ease-in-out;
+        }
+        button:hover {
+            background: plum;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .dark-theme {
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 58px;
+        }
+        .dark-theme:hover {
+            color: black;
+            background: white;
+        }
+        .salsa-intro-pic {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+        .salsa-intro-pic:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+     .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: plum;
+      }
+    </style>
+    
+</head>
+<body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+    <h1> What is Salsa? 💃 </h1>
+    <h2>
+        My favorite dance  
+    </h2>
+    <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
+    <img src="https://images.unsplash.com/photo-1618431379559-8dae023fb153?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dark Salsa dance"  class="salsa-intro-pic" >
+    </a>
+    <div class="grid">
+
+    <img src="https://images.unsplash.com/photo-1585873587499-4c2b179c6c51?q=80&w=1049&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+    <img src="https://images.unsplash.com/photo-1555489387-f7fa3290a63b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbHNhJTIwZGFuY2V8ZW58MHx8MHx8fDA%3D" alt="">
+
+    <img src="https://images.unsplash.com/photo-1474308305481-198184645d10?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <img src="https://images.unsplash.com/photo-1507539989371-99615e449486?q=80&w=1262&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+    <p>
+        <strong>
+       Salsa is a Latin American dance, associated with salsa music. .It originated in the late Eastern Cuba. It gained popularity in New York in 1960.
+      <br>
+      Salsa is a mixture of Cuban dances, such as mambo, pachanga, and rumba, as well as American dances such as swing and tap. This dance is often performed with a partner. 
+      <br>
+      Basic Salsa techniques are in place basic, forward and back basic, single and double side step, back basic, open breaks, mambo, right turn etc.
+      </strong>
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank"> <strong>Read on 📖Wikipedia </strong></a>
+    <button>Learn Salsa</button>
+    </div>
+    <footer>Coded 🌜 by <a href="https://www.linkedin.com/in/gamuchirai-blessing-muchafa/" target="_blank"> Gamu Muchafa</a></footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+    
+</body>
+</html>
